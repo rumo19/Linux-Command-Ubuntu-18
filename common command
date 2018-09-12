@@ -1,0 +1,2 @@
+#Save file denied 
+sudo chown -R $USER /vuejs/ninjatutorials
