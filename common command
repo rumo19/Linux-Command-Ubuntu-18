@@ -5,4 +5,9 @@ cp -R ./ /srv/
 #Making a file writable
 Chmod s+u filename
 #Root directory sudo -i
+#for ipconfig  
+
+Install net-tools
+
+
 
