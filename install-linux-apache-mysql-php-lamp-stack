@@ -1,0 +1,60 @@
+
+following the link : 
+https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-16-04 
+
+sudo apt-get update
+sudo apt-get install apache2
+ServerName server_domain_or_IP
+
+
+sudo apache2ctl configtest
+sudo systemctl restart apache2
+
+sudo ufw app listOutput
+Available applications:
+  Apache
+  Apache Full
+  Apache Secure
+  OpenSSH
+If you look at the Apache Full profile, it should show that it enables traffic to ports 80 and 443:
+
+sudo ufw app info "Apache Full"
+Output
+Profile: Apache Full
+Title: Web Server (HTTP,HTTPS)
+Description: Apache v2 is the next generation of the omnipresent Apache web
+server.
+
+Ports:
+  80,443/tcp
+sudo apt-get install mysql-server
+
+
+
+sudo apt-get install php libapache2-mod-php php-mcrypt php-mysql
+but for ubuntu 18, you should have write php7.1-mcrypt
+sudo nano /etc/apache2/mods-enabled/dir.conf
+
+<IfModule mod_dir.c>
+    DirectoryIndex index.html index.cgi index.pl index.php index.xhtml index.htm
+</IfModule>
+
+<IfModule mod_dir.c>
+    DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
+</IfModule>
+
+
+sudo systemctl restart apache2
+
+sudo systemctl status apache2
+
+sudo apt-get install php-cli
+sudo apt-get install package1 package2 ...
+sudo nano /var/www/html/info.php
+http://your_server_IP_address/info.php
+
+
+
+
+
+
