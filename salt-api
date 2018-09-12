@@ -1,2 +1,48 @@
 curl -H "Accept: application/json" -d -k http://localhost:8000/hook/services/restart
 curl -i localhost:8000 GET / HTTP/1.1 Host: localhost:8000 Accept: application/json
+Salt api
+Step 1 : cherrypy install 
+The 10.2.2 version of cherrypy fixed the problem of ssl and cherrypy url master 1 
+Also 3-2-3 working my master  
+Also working on 17.3.0
+
+Install korar por e run korar por sucess dekhalo
+ 
+Install: pip install CherryPy==10.2.2
+Step 2 : salt -api install 
+Linux
+PPA packages available for Ubuntu on LaunchPad:
+sudo add-apt-repository ppa:saltstack/salt
+sudo apt-get update
+sudo apt-get install salt-api
+
+
+Step 3  Pyopenssl install:
+
+
+Master file configuration
+
+####salt-api #######
+
+
+rest_cherrypy:
+  port: 8000
+  host: 127.0.0.1
+  ssl_crt: /etc/pki/tls/certs/localhost.crt
+  ssl_key: /etc/pki/tls/certs/localhost.key
+  debug: true
+external_auth:
+    pam:
+       test:
+            -  .*
+
+
+Test command 
+
+curl -kSs https://localhost:8000/login -H   'Accept: application/json' -d username=test -d password=test123 -d eauth=pam
+
+curl -sSk https://localhost:8000     -H 'Accept: application/x-yaml'     -H 'X-Auth-Token: '    -d client=local     -d tgt='master.testnet'     -d fun=test.ping
+
+
+
+
