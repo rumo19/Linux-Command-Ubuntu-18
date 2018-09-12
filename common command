@@ -1,2 +1,8 @@
 #Save file denied 
 sudo chown -R $USER /vuejs/ninjatutorials
+# Copy from cureent directory to destination 
+cp -R ./ /srv/ 
+#Making a file writable
+Chmod s+u filename
+#Root directory sudo -i
+
