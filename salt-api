@@ -1,0 +1,2 @@
+curl -H "Accept: application/json" -d -k http://localhost:8000/hook/services/restart
+curl -i localhost:8000 GET / HTTP/1.1 Host: localhost:8000 Accept: application/json
