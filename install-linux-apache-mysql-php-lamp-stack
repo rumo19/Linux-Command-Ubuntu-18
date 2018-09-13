@@ -1,3 +1,11 @@
+pdf generator 
+sudo apt install php-mbstring
+sudo service apache2 restart
+
+ sudo apt-get install php7.0-mbstring
+
+
+
 
 following the link : 
 https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-16-04 
