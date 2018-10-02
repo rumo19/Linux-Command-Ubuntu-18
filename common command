@@ -28,4 +28,8 @@ sudo openconnect vpn.tu-berlin.de
 ```
 
 
+move all files to subfolder 
+ mv --force  ./* /vuetifychartjsproject
+
+
 
