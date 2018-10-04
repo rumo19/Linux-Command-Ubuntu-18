@@ -32,4 +32,5 @@ move all files to subfolder
  mv --force  ./* /vuetifychartjsproject
 
 
-
+remove file
+rm -rf node_modules/ && npm install && npm rebuild
