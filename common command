@@ -34,3 +34,7 @@ move all files to subfolder
 
 remove file
 rm -rf node_modules/ && npm install && npm rebuild
+#### Wifi driver
+https://askubuntu.com/questions/1047245/wifi-adapter-not-found-in-ubuntu-18-04
+### Volume
+https://askubuntu.com/questions/1028968/system-volume-too-low-on-ubuntu-18-04
